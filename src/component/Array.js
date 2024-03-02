@@ -14,7 +14,7 @@ const Array = () => {
             }
             <br/>
             {
-                data.find(item => item === '퀸토') && <div>{ data.find(item => item === '퀸토')}</div> // find로 '퀸토' 아이템을 찾고 <div>안에 find로 찾은 item을 {}에 담아서 출력
+                <div>{ data.find(item => item === '퀸토')}</div> // find로 '퀸토' 아이템을 찾고 <div>안에 find로 찾은 item을 {}에 담아서 출력
             }
         </div>
     );
