@@ -32,7 +32,7 @@ const AddList = () => {
                 <button onClick={ addItem }>추가</button>
             </div>
 
-            <div className={  style.addList }>
+            <div className={ style.addList }>
                 {
                     arr.map((item, index) => 
                         <div className={ style.addListSub }>
