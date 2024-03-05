@@ -141,3 +141,32 @@
 .searchAge button {
   margin-left: 30px;
 }
+/*-----------------------------------------*/
+.contentsDiv {
+  margin: 0 auto;
+  margin-top: 40px;
+  border : 1px solid black;
+  width : 600px;
+  height : 700px;
+}
+.titleDiv {
+  margin: 0 auto;
+  margin-top: 50px;
+  border : 1px solid black;
+  width : 500px;
+  height : 60px;
+}
+.contentDiv {
+  margin: 0 auto;
+  margin-top: 40px;
+  border : 1px solid black;
+  width : 500px;
+  height : 500px;
+}
+.buttonDiv {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
