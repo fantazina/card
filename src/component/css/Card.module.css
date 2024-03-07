@@ -194,3 +194,24 @@
   width : 600px;
   height : 700px;
 }
+/*---------------------------------*/
+.countDiv{
+  text-align: center;
+}
+.dataDiv {
+  display : flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.itemDiv {
+  display : flex;
+  justify-content: center;
+  border : 1px solid black; 
+  align-items: center;
+  width : 200px; 
+  height : 70px;
+}
+.itemDiv button {
+  margin-left: 20px;
+}
