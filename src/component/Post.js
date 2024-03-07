@@ -26,7 +26,7 @@ const Post = () => {
             })
         }  
     }
-
+    
     const onPrevious = () => {
         if(page !== 0) {
             setPage(page - 1)
@@ -48,7 +48,7 @@ const Post = () => {
             <button className={ style.btn} onClick={ addItem }>추가</button>
 
            {
-                data.length > 0 &&      
+                data.length > 0 &&
 
                     <div className={ style.container }>
                         <div className={ style.titleDiv }>

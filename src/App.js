@@ -6,6 +6,7 @@ import AddList2 from './component/AddList2';
 import Contents from './component/Contents';
 import AddList3 from './component/AddList3';
 import Post from './component/Post';
+import UseEffect from './component/UseEffect';
 
 const App = () => {
   return (
@@ -16,7 +17,8 @@ const App = () => {
       {/* <AddList2 /> */}
       {/* <AddList3 /> */}
       {/* <Contents /> */}
-      <Post />
+      {/* <Post /> */}
+      <UseEffect/>
     </div>
   );
 };
