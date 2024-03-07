@@ -46,7 +46,6 @@ const Post = () => {
                 <p>내용 : <textarea onChange={ onInput } name='content' value={ postDTO.content } /></p>
             </div>
             <button className={ style.btn} onClick={ addItem }>추가</button>
-            {data.length}
 
            {
                 data.length > 0 &&      
