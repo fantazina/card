@@ -170,3 +170,27 @@
   margin-right: 10px;
   margin-top: 10px;
 }
+/*--------------------------------*/
+.postDiv {
+  margin : 0 auto;
+}
+.postDiv p {
+  display: flex;
+}
+.postDiv textarea {
+  width : 500px;
+  height : 200px;
+}
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  margin: 0 auto;
+  margin-top: 40px;
+  border : 1px solid black;
+  width : 600px;
+  height : 700px;
+}

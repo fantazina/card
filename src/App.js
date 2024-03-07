@@ -5,6 +5,7 @@ import AddList from './component/AddList';
 import AddList2 from './component/AddList2';
 import Contents from './component/Contents';
 import AddList3 from './component/AddList3';
+import Post from './component/Post';
 
 const App = () => {
   return (
@@ -14,7 +15,8 @@ const App = () => {
       {/* <AddList /> */}
       {/* <AddList2 /> */}
       {/* <AddList3 /> */}
-      <Contents />
+      {/* <Contents /> */}
+      <Post />
     </div>
   );
 };
