@@ -3,8 +3,7 @@ import style from './css/Card.module.css';
 
 const Contents = () => {
 
-  const[page, setPage] = useState(9)
-  const[dataList, setDataList] = useState([])
+  const[page, setPage] = useState(0)
 
   const data = [
     {
@@ -46,14 +45,14 @@ const Contents = () => {
   ]
 
   const onPrevious = () => {
-    if(data.index !== 0) {
-      setPage(page - data.index)
+    if(page !== 0) {
+      setPage(page - 1)
     }
   }
   
   const onNext = () => {
-    if(data.index > 0) {
-      setPage(page + data.index)
+    if(page < data.length - 1) {
+      setPage(page + 1)
     }
   }
 
@@ -61,11 +60,11 @@ const Contents = () => {
         <div>
             <div className={ style.contentsDiv }>
                 <div className={ style.titleDiv }>
-                  { data[page].title }
+                  <p>{ data[page].title }</p>
                 </div>
 
                 <div className={ style.contentDiv }>
-                  { data[page].content }
+                  <p>{ data[page].content }</p>
                 </div>
 
                 <div className={ style.buttonDiv }>
