@@ -66,7 +66,6 @@ const AddList3 = () => {
                         </div>
                     )
                 }
-                
 
             </div>
 
@@ -79,16 +78,12 @@ const AddList3 = () => {
                 <div className={ style.searchAgeDiv }>     
                     {   
                         searchAge && (
-
-                        
                             <div className={ style.searchAge }>
                                 <p>나이 : { searchAge } </p>
                             </div>
                         )
-                    }            
-                        
+                    }  
                 </div>
-                
             </div>
         </div>
     );

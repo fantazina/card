@@ -27,7 +27,6 @@ const AddList2 = () => {
                 name : '',
                 age : ''
             })
-
             inputRef.current.focus() //input창 포커스
         }
     }

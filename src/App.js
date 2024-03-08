@@ -8,6 +8,7 @@ import AddList3 from './component/AddList3';
 import Post from './component/Post';
 import UseEffect from './component/UseEffect';
 import UseEffect2 from './component/UseEffect2';
+import Button from './component/Button';
 
 const App = () => {
   return (
@@ -20,7 +21,8 @@ const App = () => {
       {/* <Contents /> */}
       {/* <Post /> */}
       {/* <UseEffect/> */}
-      <UseEffect2 />
+      {/* <UseEffect2 /> */}
+      <Button />
     </div>
   );
 };
