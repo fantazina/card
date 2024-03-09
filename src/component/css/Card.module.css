@@ -148,6 +148,10 @@
   border : 1px solid black;
   width : 600px;
   height : 700px;
+  border-radius: 5px !important;
+  border : none; 
+  background-color: white;
+  box-shadow : 0 0 6px rgba(0, 0, 0, 0.2);
 }
 .titleDiv {
   margin: 0 auto;
@@ -215,3 +219,60 @@
 .itemDiv button {
   margin-left: 20px;
 }
+/*--------------------------------*/
+.dinosaurDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dinosaurDiv h2 {
+  margin-top: 30px;
+}
+.photo {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  width : 600px;
+  object-fit: cover;
+}
+.contents_Div {
+  margin: 0 auto;
+  border : 1px solid black;
+  width : 600px;
+  height : 440px;
+}
+.content_Div {
+  padding : 0 15px 0 15px; 
+  margin: 0 auto;
+  margin-top: 40px;
+  border : 1px solid black;
+  width : 520px;
+  height : 250px;
+}
+.title_Div {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 40px;
+  border : 1px solid black;
+  width : 520px;
+  height : 60px;
+}
+.button_Div {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.button_Div button {
+  width: 30px;
+  height : 30px;
+  cursor: pointer;
+  border: none;
+  background-color: blanchedalmond;
+  outline: none;
+}
+.button_Div button:hover {
+  background-color: lightblue;
+  border-radius: 30px !important;
+  transition : 0.4s;
+} 

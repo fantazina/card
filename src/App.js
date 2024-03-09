@@ -9,6 +9,7 @@ import Post from './component/Post';
 import UseEffect from './component/UseEffect';
 import UseEffect2 from './component/UseEffect2';
 import Button from './component/Button';
+import Dinosaur from './component/Dinosaur';
 
 const App = () => {
   return (
@@ -22,7 +23,8 @@ const App = () => {
       {/* <Post /> */}
       {/* <UseEffect/> */}
       {/* <UseEffect2 /> */}
-      <Button />
+      {/* <Button /> */}
+    <Dinosaur />
     </div>
   );
 };

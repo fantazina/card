@@ -38,8 +38,12 @@ const Button = () => {
             </div>
 
             <div>
-                <button onClick={ onSubA }>A : {data[page].a}</button>
-                <button onClick= {onSubB }>B : {data[page].b}</button>
+                <div>
+                    <button onClick={ onSubA }>A : {data[page].a}</button>
+                </div>
+                <div>
+                    <button onClick= {onSubB }>B : {data[page].b}</button>
+                </div>
             </div>
         </div>
     );
