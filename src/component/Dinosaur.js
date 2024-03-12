@@ -51,12 +51,12 @@ const Dinosaur = () => {
         {
             name : '파키케팔로사우루스',
             content : '파키케팔로사우루스는 후기 백악기(7000만 년 전 ~ 6600만 년 전)에 살았으며 미국 서부와 캐나다에서 발견된 초식공룡입니다. 후두류에 속하는 파키케팔로사우루스는 머리에 볼록 솟아 올라온 머리뼈와 머리 주위의 돌기가 있는 것이 가장 큰 특징입니다. 돔 머리 형태를 가지고 있어 ‘두꺼운 머리 도마뱀’이란 파키케팔로사우루스 이름을 가지게 되었습니다. 이족보행을 하였으며 날렵한 몸집과 잘 발달된 뒷다리를 이용하여 도망을 갔을 것으로 추측하고 있습니다.',
-            photo : 'https://i.namu.wiki/i/Cw6cojxYAgpwqG439V5sEyfv9gzWQ586dU37XMql8afAKB3UtCJPrCzh4THAByLZyZC5YlFfIN_MgVCqwHeCkw.webp'
+            photo : 'https://i.namu.wiki/i/5sFpUIHYoIdG2wNKpj922QU7Hj79PbUV-QqPlYJH1Kt_UtXASp7To39WkAyADzvP5fmiQCVsu2fMPC1uQSsBbg.webp'
         },
         {
             name : '트리케라톱스',
             content : '트리케라톱스는 후기 백악기(6800만 년 전 ~ 6500만 년 전)에 살았으며 북아메리카에서 발견된 각룡류인 초식공룡입니다. 트리케라톱스는 머리에 세 개의 뿔과 넓은 프릴을 가진 특징을 가졌습니다. 길이는 약 7.9~9m이며, 무게는 6~12ton으로 각룡류 중에서 몸집이 큰 편에 속하여 육상 공룡 중 머리가 가장 큰 것에 속하고 있습니다. 큰 몸집으로 빨리 달릴 수 없는 트리케라톱스는 커다란 뿔을 가지고 있어 육식공룡의 공격에 정면으로 싸웠을 것으로 추측하고 있습니다.',
-            photo : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDA3MjhfNzYg%2FMDAxNTk1ODk5OTc4MTU1.zf7ZgaKFvaVHQTEsZoXWubha1mKp6AeO1BsNfq4emcog.ufjPTvpk6ZGGbPcsgQz0Hh2dCwZOXXupBvu-CyPohWMg.PNG.godzilla1998%2F42864361_2148256335501854_8587880313437290496_o.png&type=sc960_832',
+            photo : 'https://w7.pngwing.com/pngs/893/957/png-transparent-triceratops-late-cretaceous-tyrannosaurus-reptile-dinosaur-dinosaur-terrestrial-animal-animal-%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B0.png',
         },
         {
             name :'티라노사우루스',
@@ -100,23 +100,25 @@ const Dinosaur = () => {
     }
 
     return (
-        <div>
+        <div className={style.background}>
             <div className={ style.dinosaurDiv }>
                 <h2>지나가 좋아하는</h2>
-                <img className={ style.photo } src={ data[page].photo }/>
-                <div className={ style.contents_Div }>
-                    <div className={ style.title_Div }>
-                        <p>이름 : { data[page].name }</p>
+                <div style={{ display : 'flex' }}>
+                    <img className={ style.photo } src={ data[page].photo }/>
+                    <div className={ style.contents_Div }>
+                        <div className={ style.title_Div }>
+                            <p>이름 : { data[page].name }</p>
+                        </div>
+
+                    <div className={ style.content_Div }>
+                    <p>{ data[page].content }</p>
                     </div>
 
-                <div className={ style.content_Div }>
-                  <p>{ data[page].content }</p>
-                </div>
-
-                <div className={ style.button_Div }>
-                    <button onClick={ onPrevious }>◁</button>
-                    <button onClick={ onNext }>▷</button>
-                </div>
+                    <div className={ style.button_Div }>
+                        { page > 0 && <button onClick={ onPrevious } style={{ float:'left' }}>{data[page - 1].name}</button> }
+                        <button onClick={ onNext } style={{ float:'right' }}>{data[page + 1].name}</button>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
