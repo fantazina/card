@@ -1,27 +1,36 @@
 import React, { useState } from 'react';
-import style from './css/Card.module.css';
+import style from './css/Card.module.css'; 
+import coel from './img/코엘로피시스.png';
+import raeso from './img/레소토사우루스.png';
+import scaly from './img/스켈리도사우루스.png';
+import kenta from './img/켄타로사우루스.png';
+import truedon from './img/트루돈.png';
+import park from './img/파키케팔로사우루스.png';
+import tree from './img/트리케라톱스.png';
+import ella from './img/엘라스모사우루스.png';
+
 
 const Dinosaur = () => {
     const data = ([ 
         {
             name : '코엘로피시스',
             content : '코엘로피시스는 후기 트라이아스기(2억 3백만 년 전 ~ 1억 9600만 년 전)에 살았으며 미국 뉴멕시코주 남서부, 애리조나주, 유타주 지역에서 발견된 육식공룡입니다. 수각류인 코엘로피시스 공룡은 몸집은 작았지만 당시에 먹이사슬에서 가장 꼭대기에 있는 포식자였습니다. 몸집이 작지만 속도와 민첩성은 최고의 조건을 갖추고 있었습니다.',
-            photo : 'https://search.pstatic.net/common/?src=https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F4428_000_1%2F20160427160253766_10J46AWOK.png%2Fs_sm10_7_i4.png%3Ftype%3Dm4500_4500_fst_n&type=sc960_832'
+            photo : coel
         },
         {
             name : '레소토사우루스',
             content : '레소토사우루스는 전기 쥐라기 시대(2억 100만 년 전 ~ 1억 7400만 년 전)에 살았으며 남아프리카공화국에서 발견된 키가 1m의 아주 작은 초식공룡입니다. 남아프리카공화국의 레소토에서 발견되어 ‘레소토 도마뱀’이란 레소토사우루스 이름을 가지게 되었습니다. 조반류 중에 가장 원시적인 공룡에 속하며 도마뱀처럼 생긴 머리와 가늘고 긴 꼬리를 가졌습니다.',
-            photo : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20150309_234%2Fnice150202_1425868105502n9rRy_JPEG%2FNaverBlog_20150309_112825_01.jpg&type=sc960_832'
+            photo : raeso
         },
         {
             name : '스켈리도사우루스',
             content : '스켈리도사우루스는 전기 쥐라기 시대(2억 100만 년 전 ~ 1억 7400만 년 전)에 살았으며 유럽에서 발견된 머리가 사각형인 초식공룡입니다. 등과 꼬리에 갑옷처럼 골편이 많이 붙어 있으며 튼튼한 꼬리를 가지고 있습니다. 다리가 타조처럼 독특하여 ‘다리 도마뱀’이라는 스켈리도사우루스 이름을 가졌으며 조반류 중에서도 가장 초기 공룡이라서 조반류의 기원 및 진화 정보를 제공하고 있습니다. 켈리도사우루스는 검룡류와 곡룡류 공룡의 선조이기도 합니다',
-            photo : 'https://search.pstatic.net/common/?src=https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F4428_000_1%2F20160427160002043_RKTPFND8U.png%2Fs_sm10_3_i3.png%3Ftype%3Dm4500_4500_fst_n&type=sc960_832'
+            photo : scaly
         },
         {
             name : '켄타로사우루스',
             content : '켄트로사우루스는 후기 쥐라기(1억 6400만 년 전 ~ 1억 4500만 년 전)에 살았으며 동아프리카의 탄자니아에서 발견된 초식공룡입니다. 목부터 꼬리 끝까지 한 쌍으로 무시무시한 골창을 가지고 있어 ‘끝이 뾰족한 도마뱀’이라는 켄트로사우루스 이름을 가졌습니다. 네발로 걸었으나 앞다리와 뒷다리 차이가 커서 머리를 밑으로 향한 채 이동하였습니다.',
-            photo : 'https://media.istockphoto.com/id/627661942/ko/%EC%82%AC%EC%A7%84/%EC%BC%84%EB%A1%9C%EC%82%AC%EC%9A%B0%EB%A3%A8%EC%8A%A4.jpg?s=612x612&w=0&k=20&c=An-HK3MpJGTDTDbFFcu9WRXsnr7y5lMb9GRnr_mIJ_Q='
+            photo : kenta
         },
         {
             name : '브라키오사우루스',
@@ -41,9 +50,9 @@ const Dinosaur = () => {
         {
             name : '트루돈',
             content : '트루돈은 후기 백악기(7700만 년 전 ~ 6900만 년 전)에 살았으며 미국의 몬태나주, 와이오밍주, 알래스카지역과 캐나다지역에서 발견된 육식공룡입니다. 수각류인 트루돈은 ‘상처 난 이빨’이라는 의미를 가지고 있는데 발견된 화석을 통하여 이빨이 크게 구부러져 있으며 뒷면에는 톱니날이 있었습니다. 가장 특별한 점은 모든 공룡 중에서 몸 크기에 비해 가장 큰 뇌를 가지고 있었습니다. 큰 뇌를 이용하여 지능적으로 사냥했을 것으로 추측하고 있으며 무리지어 협력하여 사냥 했을 것으로 예상됩니다.',
-            photo : 'https://search.pstatic.net/common/?src=https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F4428_000_1%2F20160427161118288_W7B9IWM4O.png%2Fs_sm10_18_i3.png%3Ftype%3Dm4500_4500_fst_n&type=sc960_832'
+            photo : truedon
         },
-        {
+        {    
             name : '파라사우롤로푸스',
             content : '파라사우롤로푸스는 후기 백악기(7650만 년 전 ~ 7300만 년 전)에 살았으며 미국 서부에서 발견된 초식공룡입니다. 파라사우롤로푸스의 가장 큰 특징은 볏을 포함한 두개골의 길이가 1.6~2미터에 이를 정도로 큰 크기를 가지고 있으며, 오리주둥이를 가지고 있는 조반류 공룡입니다. 파라사우롤로푸스는 희귀한 공룡 중 하나이며 가장 진화한 초식공룡 중 하나입니다. 커다란 볏 때문에 “볏을 가진 도마뱀에 가까운” 뜻을 가진 파라사우롤로푸스 이름을 가지게 되었습니다.',
             photo : 'https://i.namu.wiki/i/ji2bZ38F-t8FYuYlrGAg5Q15cmwYgQiTnSMnm3knHJe1hD3Q4kSs9_0ivb-LT_p8pFFhdIopY2doi36_nR2lLQ.webp'
@@ -51,12 +60,12 @@ const Dinosaur = () => {
         {
             name : '파키케팔로사우루스',
             content : '파키케팔로사우루스는 후기 백악기(7000만 년 전 ~ 6600만 년 전)에 살았으며 미국 서부와 캐나다에서 발견된 초식공룡입니다. 후두류에 속하는 파키케팔로사우루스는 머리에 볼록 솟아 올라온 머리뼈와 머리 주위의 돌기가 있는 것이 가장 큰 특징입니다. 돔 머리 형태를 가지고 있어 ‘두꺼운 머리 도마뱀’이란 파키케팔로사우루스 이름을 가지게 되었습니다. 이족보행을 하였으며 날렵한 몸집과 잘 발달된 뒷다리를 이용하여 도망을 갔을 것으로 추측하고 있습니다.',
-            photo : 'https://i.namu.wiki/i/5sFpUIHYoIdG2wNKpj922QU7Hj79PbUV-QqPlYJH1Kt_UtXASp7To39WkAyADzvP5fmiQCVsu2fMPC1uQSsBbg.webp'
-        },
+           photo : park
+        },    
         {
             name : '트리케라톱스',
             content : '트리케라톱스는 후기 백악기(6800만 년 전 ~ 6500만 년 전)에 살았으며 북아메리카에서 발견된 각룡류인 초식공룡입니다. 트리케라톱스는 머리에 세 개의 뿔과 넓은 프릴을 가진 특징을 가졌습니다. 길이는 약 7.9~9m이며, 무게는 6~12ton으로 각룡류 중에서 몸집이 큰 편에 속하여 육상 공룡 중 머리가 가장 큰 것에 속하고 있습니다. 큰 몸집으로 빨리 달릴 수 없는 트리케라톱스는 커다란 뿔을 가지고 있어 육식공룡의 공격에 정면으로 싸웠을 것으로 추측하고 있습니다.',
-            photo : 'https://w7.pngwing.com/pngs/893/957/png-transparent-triceratops-late-cretaceous-tyrannosaurus-reptile-dinosaur-dinosaur-terrestrial-animal-animal-%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B0.png',
+            photo : tree
         },
         {
             name :'티라노사우루스',
@@ -76,7 +85,7 @@ const Dinosaur = () => {
         {
             name : '엘라스모사우루스',
             content : '‘판 도마뱀’이라는 뜻으로 백악기 후기의 대표적인 수장룡입니다. 수장룡 중에서 몸과 목이 가장 길며 목의 길이는 몸 길이의 반이 넘는 8m이고, 목뼈는 자그마치 75개나 되어 목만 봤을 때는 마치 뱀 같습니다. 목은 매우 유연해 어떤 방향이든지 자유롭게 움직일 수 있었습니다. 이 긴 목을 이용해 물고기를 잡으려고 수면 가까이 날아다니는 익룡을 잡아먹었을 것으로 추측됩니다. 머리는 몸에 비해 매우 작고, 입에는 날카로운 이빨이 줄지어 나 있습니다.',
-            photo : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20160105_31%2Fdaecheongay_1451985818428wzk4x_JPEG%2F%25C4%25B8%25C3%25B31.JPG&type=sc960_832'
+            photo : ella
         },
         {
             name : '벨로키랍토르',
@@ -102,7 +111,7 @@ const Dinosaur = () => {
     return (
         <div className={style.background}>
             <div className={ style.dinosaurDiv }>
-                <h2>지나가 좋아하는</h2>
+                <h1>지나가 좋아하는</h1>
                 <div style={{ display : 'flex' }}>
                     <img className={ style.photo } src={ data[page].photo }/>
                     <div className={ style.contents_Div }>
