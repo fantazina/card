@@ -232,6 +232,12 @@
   width: 100%;
   aspect-ratio: 3/2;
 }
+.btn {
+  margin: 0 auto;
+  width : 50px;
+  height: 30px;
+  align-self: flex-start;
+}
 .dinosaurDiv {
   display: flex;
   flex-direction: column;
@@ -288,3 +294,25 @@
   border-radius: 30px !important;
   transition : 0.4s;
 } 
+/*------------------------------------*/
+.backgroundImg {
+  display: flex;
+  flex-wrap: wrap; /* 이미지가 가로로 넘치면 줄바꿈*/
+  justify-content: space-between;
+  background-image: url('../img/사전배경.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  aspect-ratio: 3/2;
+}
+.dinosaurList {
+  display: flex;
+  flex-wrap: wrap;
+}
+.dinosaurImg {
+  margin-top: 50px;
+  padding-left: 70px;
+  padding-top: -50px;
+  width: 200px;
+}
