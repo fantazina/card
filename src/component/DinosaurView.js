@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import style from './css/Card.module.css'; 
 import data from './DinosaurData' ;
 
 const DinosaurView = ({onPage, select}) => {
 
     const[viewPg, setViewPg] = useState(select)
+
+    useEffect(() => {
+        setViewPg(select)
+
+    },[select])
 
     const onPrevious = () => {
         if(viewPg !== 0) {
@@ -31,7 +36,7 @@ const DinosaurView = ({onPage, select}) => {
                             </div>
 
                         <div className={ style.content_Div }>
-                        <p>{ data[viewPg].content }</p>
+                            <p>{ data[viewPg].content }</p>
                         </div>
 
                         <div className={ style.button_Div }>

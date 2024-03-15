@@ -306,13 +306,24 @@
   width: 100%;
   aspect-ratio: 3/2;
 }
+.searchInput {
+  margin: 0 auto;
+  position: fixed;
+  top: 20px;
+  left: 40px;
+}
 .dinosaurList {
   display: flex;
   flex-wrap: wrap;
 }
+.dinoResult {
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+  margin-left: 450px;
+}
 .dinosaurImg {
   margin-top: 50px;
   padding-left: 70px;
-  padding-top: -50px;
   width: 200px;
 }
